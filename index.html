@@ -4090,28 +4090,28 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-  async function activerNotifications() {
+ async function activerNotifications() {
 
   const status = document.getElementById("notificationStatus");
 
   status.textContent = "⏳ Activation des notifications...";
 
-  if (!("Notification" in window)) {
-    status.textContent = "❌ Notifications non compatibles avec cet appareil.";
-    return;
-  }
-
-  if (!("serviceWorker" in navigator)) {
-    status.textContent = "❌ Service Worker non disponible.";
-    return;
-  }
-
-  if (!("PushManager" in window)) {
-    status.textContent = "❌ Push non disponible sur cet appareil.";
-    return;
-  }
-
   try {
+
+    if (!("Notification" in window)) {
+      status.textContent = "❌ Notifications non disponibles.";
+      return;
+    }
+
+    if (!("serviceWorker" in navigator)) {
+      status.textContent = "❌ Service Worker non disponible.";
+      return;
+    }
+
+    if (!("PushManager" in window)) {
+      status.textContent = "❌ Push non disponible.";
+      return;
+    }
 
     const permission = await Notification.requestPermission();
 
@@ -4125,8 +4125,12 @@ if ("serviceWorker" in navigator) {
     const publicKey = "BD-sU_7UDTPimQmMTIpZfjfa9hd8GoFmJkUOhRSuFNco3ehee1AAAWxgqgXtOLEFftukn0RGHttYpYgdnCUdlzk";
 
     function urlBase64ToUint8Array(base64String) {
-      const padding = "=".repeat((4 - base64String.length % 4) % 4);
-      const base64 = (base64String + padding)
+
+      const padding =
+        "=".repeat((4 - base64String.length % 4) % 4);
+
+      const base64 =
+        (base64String + padding)
         .replace(/-/g, "+")
         .replace(/_/g, "/");
 
@@ -4137,32 +4141,71 @@ if ("serviceWorker" in navigator) {
       );
     }
 
-    const subscription = await registration.pushManager.subscribe({
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(publicKey)
-    });
+    let subscription =
+      await registration.pushManager.getSubscription();
 
-    console.log("ABONNEMENT PUSH :", subscription);
+    if (!subscription) {
+
+      subscription =
+        await registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey:
+            urlBase64ToUint8Array(publicKey)
+        });
+    }
+
+    console.log("Subscription BILANPRO :", subscription);
+
+    const response = await fetch(
+      "https://bilanpro-push.martos-gaetan67.workers.dev",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+          subscription: subscription,
+          title: "🚒 BILANPRO",
+          message: "Notifications BILANPRO activées ✅",
+          url: "https://gmmofficial.github.io/BILANPRO/"
+        })
+      }
+    );
+
+    const result = await response.json();
+
+    console.log("Réponse Worker :", result);
+
+    if (!response.ok || !result.success) {
+      throw new Error(
+        result.error || "Erreur du Worker"
+      );
+    }
 
     localStorage.setItem(
       "BILANPRO_PUSH_SUBSCRIPTION",
       JSON.stringify(subscription)
     );
 
-    status.textContent = "✅ Notifications BILANPRO activées !";
+    status.textContent =
+      "✅ Notifications BILANPRO activées !";
 
-    if ("setAppBadge" in navigator) {
-      navigator.setAppBadge(1);
-    }
-
-    alert("🔔 Notifications BILANPRO activées !");
+    alert(
+      "🔔 Notifications BILANPRO activées !"
+    );
 
   } catch (error) {
 
-    console.error("Erreur notifications :", error);
+    console.error(
+      "Erreur activation Push :",
+      error
+    );
 
     status.textContent =
-      "❌ Impossible d'activer les notifications.";
+      "❌ Erreur lors de l'activation des notifications.";
 
   }
+}
 }
