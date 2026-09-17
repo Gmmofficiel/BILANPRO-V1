@@ -4061,7 +4061,18 @@ document
 
     }
   );
-
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(function (registration) {
+        console.log("BILANPRO Service Worker actif ✅", registration.scope);
+      })
+      .catch(function (error) {
+        console.error("Erreur Service Worker ❌", error);
+      });
+  });
+}
 </script>
 
 </div>
