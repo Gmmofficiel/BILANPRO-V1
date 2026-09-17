@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-192.png">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#03060a">
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>BILANPRO</title>
 
-<!-- Générateur PDF -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icon-192.png">
+
+<link rel="apple-touch-icon"
+      href="icon-192.png">
+
+<link rel="manifest"
+      href="manifest.json">
+
+<meta name="theme-color"
+      content="#03060a">
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+</script>
 
 <style>
 
@@ -44,10 +59,7 @@ button{
   padding-bottom:40px;
 }
 
-
-/* =========================
-   TOPBAR
-========================= */
+/* TOPBAR */
 
 .topbar{
   height:70px;
@@ -55,12 +67,9 @@ button{
   align-items:center;
   justify-content:space-between;
   padding:0 20px;
-
   background:rgba(4,8,14,.85);
   border-bottom:1px solid rgba(255,255,255,.08);
-
   backdrop-filter:blur(15px);
-
   position:sticky;
   top:0;
   z-index:20;
@@ -70,7 +79,6 @@ button{
   display:flex;
   align-items:center;
   gap:10px;
-
   font-size:20px;
   font-weight:900;
   letter-spacing:1px;
@@ -79,18 +87,12 @@ button{
 .logo{
   width:39px;
   height:39px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   border-radius:50%;
-
   background:#d71920;
-
-  box-shadow:
-    0 0 22px rgba(215,25,32,.45);
-
+  box-shadow:0 0 22px rgba(215,25,32,.45);
   font-size:21px;
 }
 
@@ -104,15 +106,11 @@ button{
   font-weight:bold;
 }
 
-
-/* =========================
-   PAGES
-========================= */
+/* PAGES */
 
 .page{
   display:none;
   padding:25px 18px;
-
   animation:fade .25s ease;
 }
 
@@ -134,10 +132,7 @@ button{
 
 }
 
-
-/* =========================
-   ACCUEIL
-========================= */
+/* ACCUEIL */
 
 .hero{
   text-align:center;
@@ -147,24 +142,17 @@ button{
 .heart-circle{
   width:125px;
   height:125px;
-
   margin:0 auto 25px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   border-radius:50%;
-
   font-size:58px;
-
   background:
     radial-gradient(circle,#e51d27,#8e1016);
-
   box-shadow:
     0 0 25px rgba(229,29,39,.5),
     0 0 80px rgba(229,29,39,.15);
-
   animation:pulse 2s infinite;
 }
 
@@ -193,50 +181,33 @@ button{
 .actions{
   display:grid;
   gap:12px;
-
   max-width:500px;
-
   margin:25px auto;
 }
 
-
-/* =========================
-   BOUTONS
-========================= */
+/* BOUTONS */
 
 .main-btn{
   width:100%;
-
   padding:17px;
-
   border:0;
   border-radius:14px;
-
   color:#fff;
-
   background:
     linear-gradient(135deg,#d71920,#991018);
-
   font-size:15px;
   font-weight:900;
-
   box-shadow:
     0 8px 25px rgba(215,25,32,.2);
 }
 
 .secondary-btn{
   width:100%;
-
   padding:16px;
-
   border-radius:14px;
-
   color:#fff;
-
   background:#121c28;
-
   border:1px solid #29384b;
-
   font-weight:bold;
 }
 
@@ -251,10 +222,7 @@ button{
     linear-gradient(135deg,#d71920,#7f0c12);
 }
 
-
-/* =========================
-   HEADER PAGE
-========================= */
+/* HEADER */
 
 .page-header{
   margin-bottom:20px;
@@ -276,48 +244,34 @@ button{
   margin-top:7px;
 }
 
-
-/* =========================
-   PROGRESS
-========================= */
+/* PROGRESS */
 
 .progress{
   display:flex;
   gap:6px;
-
   margin-bottom:25px;
 }
 
 .progress div{
   height:5px;
   flex:1;
-
   border-radius:10px;
-
   background:#1d2938;
 }
 
 .progress div.active{
   background:#d71920;
-
   box-shadow:
     0 0 10px rgba(215,25,32,.45);
 }
 
-
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .card{
   background:rgba(13,21,32,.92);
-
   border:1px solid #202e40;
-
   border-radius:17px;
-
   padding:18px;
-
   margin-bottom:15px;
 }
 
@@ -325,9 +279,7 @@ button{
   display:flex;
   align-items:center;
   gap:10px;
-
   margin-bottom:17px;
-
   font-size:18px;
   font-weight:900;
 }
@@ -335,24 +287,16 @@ button{
 .badge{
   width:35px;
   height:35px;
-
   flex-shrink:0;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   border-radius:10px;
-
   background:#d71920;
-
   font-weight:900;
 }
 
-
-/* =========================
-   CHAMPS
-========================= */
+/* CHAMPS */
 
 .field{
   margin-bottom:14px;
@@ -364,13 +308,9 @@ button{
 
 .field label{
   display:block;
-
   color:#aab5c3;
-
   font-size:13px;
-
   margin-bottom:7px;
-
   font-weight:bold;
 }
 
@@ -378,19 +318,12 @@ input,
 textarea,
 select{
   width:100%;
-
   padding:13px;
-
   border-radius:10px;
-
   border:1px solid #29384b;
-
   outline:none;
-
   background:#09111b;
-
   color:#fff;
-
   font-size:14px;
 }
 
@@ -409,29 +342,20 @@ select option{
   background:#09111b;
 }
 
-
-/* =========================
-   XABCDE
-========================= */
+/* XABCDE */
 
 .assessment{
   padding:16px;
-
   margin-bottom:12px;
-
   border-radius:15px;
-
   background:#0c1521;
-
   border:1px solid #253448;
 }
 
 .assessment-head{
   display:flex;
   align-items:center;
-
   gap:12px;
-
   margin-bottom:12px;
 }
 
@@ -441,63 +365,44 @@ select option{
 
 .assessment-head small{
   display:block;
-
   color:#778597;
-
   margin-top:3px;
 }
 
 .assessment-actions{
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:9px;
 }
 
 .choice{
   padding:14px 10px;
-
   border-radius:11px;
-
   background:#101a27;
-
   color:#fff;
-
   border:1px solid #29384b;
-
   font-weight:bold;
 }
 
 .choice.selected{
   background:#8d1117;
-
   border-color:#e21d25;
 }
 
 .choice.normal.selected{
   background:#135a40;
-
   border-color:#19b879;
 }
 
 .result{
   display:none;
-
   margin-top:12px;
-
   padding:11px;
-
   background:#08131e;
-
   border-radius:9px;
-
   border-left:3px solid #d71920;
-
   color:#aeb9c8;
-
   font-size:12px;
-
   line-height:1.55;
 }
 
@@ -505,30 +410,20 @@ select option{
   display:block;
 }
 
-
-/* =========================
-   SUMMARY
-========================= */
+/* SUMMARY */
 
 .summary{
   background:#09131e;
-
   border:1px solid #27364a;
-
   border-radius:15px;
-
   padding:17px;
 }
 
 .summary-row{
   display:flex;
-
   justify-content:space-between;
-
   gap:15px;
-
   padding:10px 0;
-
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
@@ -542,45 +437,28 @@ select option{
 
 .summary-row span:last-child{
   text-align:right;
-
   font-weight:bold;
-
   word-break:break-word;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer-actions{
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:10px;
-
   margin-top:20px;
 }
 
-
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 .modal{
   position:fixed;
-
   inset:0;
-
   display:none;
-
   align-items:flex-end;
-
   justify-content:center;
-
   background:rgba(0,0,0,.8);
-
   z-index:100;
 }
 
@@ -590,21 +468,13 @@ select option{
 
 .modal-box{
   width:100%;
-
   max-width:700px;
-
   max-height:90vh;
-
   overflow:auto;
-
   padding:22px;
-
   background:#0d1723;
-
   border:1px solid #29384b;
-
   border-radius:22px 22px 0 0;
-
   animation:slideUp .25s ease;
 }
 
@@ -622,69 +492,40 @@ select option{
 
 .modal-header{
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
   margin-bottom:20px;
-}
-
-.modal-header h2{
-  margin-top:4px;
 }
 
 .close{
   width:36px;
   height:36px;
-
   border:0;
-
   border-radius:50%;
-
   background:#1b2735;
-
   color:#fff;
-
   font-size:21px;
 }
 
-
-/* =========================
-   TOAST
-========================= */
+/* TOAST */
 
 .toast{
   position:fixed;
-
   bottom:20px;
-
   left:50%;
-
   transform:
     translateX(-50%)
     translateY(100px);
-
   padding:13px 18px;
-
   border-radius:12px;
-
   background:#142131;
-
   border:1px solid #33465e;
-
   z-index:200;
-
   opacity:0;
-
   transition:.3s;
-
   font-size:13px;
-
   width:max-content;
-
   max-width:90%;
-
   text-align:center;
 }
 
@@ -692,37 +533,23 @@ select option{
   transform:
     translateX(-50%)
     translateY(0);
-
   opacity:1;
 }
 
-
-/* =========================
-   INFO
-========================= */
+/* INFO */
 
 .info-box{
   padding:14px;
-
   border-radius:12px;
-
   background:#0a1720;
-
   border:1px solid #203849;
-
   color:#91a0b1;
-
   font-size:12px;
-
   line-height:1.5;
-
   margin-bottom:15px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -745,25 +572,18 @@ select option{
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
 <div class="app">
 
-
-<!-- =====================================================
-     TOPBAR
-===================================================== -->
-
 <header class="topbar">
 
   <div class="brand">
 
-    <div class="logo">
-      ♥
-    </div>
+    <div class="logo">♥</div>
 
     BILAN<span>PRO</span>
 
@@ -778,13 +598,11 @@ select option{
 </header>
 
 
-<!-- =====================================================
-     PAGE 1
-===================================================== -->
+<!-- PAGE 1 -->
 
 <section
-  class="page active"
-  id="page1">
+class="page active"
+id="page1">
 
   <div class="hero">
 
@@ -802,33 +620,24 @@ select option{
 
   </div>
 
-
   <div class="actions">
 
     <button
-      class="main-btn"
-      onclick="showPage(2)">
-
+    class="main-btn"
+    onclick="showPage(2)">
       ＋ NOUVELLE INTERVENTION
-
     </button>
 
-
     <button
-      class="secondary-btn"
-      onclick="showPage(4)">
-
+    class="secondary-btn"
+    onclick="showPage(4)">
       ▣ MES INTERVENTIONS
-
     </button>
 
-
     <button
-      class="secondary-btn"
-      onclick="showPage(6)">
-
+    class="secondary-btn"
+    onclick="showPage(6)">
       ⚙ PARAMÈTRES
-
     </button>
 
   </div>
@@ -836,23 +645,17 @@ select option{
 </section>
 
 
-<!-- =====================================================
-     PAGE 2
-===================================================== -->
+<!-- PAGE 2 -->
 
 <section
-  class="page"
-  id="page2">
+class="page"
+id="page2">
 
   <div class="page-header">
 
-    <small>
-      ÉTAPE 01 / 04
-    </small>
+    <small>ÉTAPE 01 / 04</small>
 
-    <h2>
-      Identité victime
-    </h2>
+    <h2>Identité victime</h2>
 
     <p>
       Renseignez les informations disponibles.
@@ -860,77 +663,49 @@ select option{
 
   </div>
 
-
   <div class="progress">
-
     <div class="active"></div>
     <div></div>
     <div></div>
     <div></div>
-
   </div>
-
 
   <div class="card">
 
     <div class="card-title">
 
-      <div class="badge">
-        👤
-      </div>
+      <div class="badge">👤</div>
 
       Identification
 
     </div>
 
-
     <div class="field">
-
-      <label>
-        NOM
-      </label>
-
+      <label>NOM</label>
       <input
-        id="nom"
-        type="text"
-        placeholder="Nom de la victime">
-
+      id="nom"
+      type="text"
+      placeholder="Nom de la victime">
     </div>
 
-
     <div class="field">
-
-      <label>
-        PRÉNOM
-      </label>
-
+      <label>PRÉNOM</label>
       <input
-        id="prenom"
-        type="text"
-        placeholder="Prénom de la victime">
-
+      id="prenom"
+      type="text"
+      placeholder="Prénom de la victime">
     </div>
 
-
     <div class="field">
-
-      <label>
-        ÂGE
-      </label>
-
+      <label>ÂGE</label>
       <input
-        id="age"
-        type="number"
-        placeholder="Âge">
-
+      id="age"
+      type="number"
+      placeholder="Âge">
     </div>
 
-
     <div class="field">
-
-      <label>
-        SEXE
-      </label>
+      <label>SEXE</label>
 
       <select id="sexe">
 
@@ -938,69 +713,48 @@ select option{
           Sélectionner
         </option>
 
-        <option>
-          Homme
-        </option>
-
-        <option>
-          Femme
-        </option>
-
-        <option>
-          Autre / Non précisé
-        </option>
+        <option>Homme</option>
+        <option>Femme</option>
+        <option>Autre / Non précisé</option>
 
       </select>
 
     </div>
 
-
     <div class="field">
-
-      <label>
-        ADRESSE / LIEU
-      </label>
+      <label>ADRESSE / LIEU</label>
 
       <input
-        id="lieu"
-        type="text"
-        placeholder="Lieu de prise en charge">
+      id="lieu"
+      type="text"
+      placeholder="Lieu de prise en charge">
 
     </div>
 
-
     <div class="field">
-
-      <label>
-        MOTIF DE PRISE EN CHARGE
-      </label>
+      <label>MOTIF DE PRISE EN CHARGE</label>
 
       <textarea
-        id="motif"
-        placeholder="Motif, circonstances, plainte principale..."></textarea>
+      id="motif"
+      placeholder="Motif, circonstances, plainte principale...">
+      </textarea>
 
     </div>
 
   </div>
 
-
   <div class="footer-actions">
 
     <button
-      class="secondary-btn"
-      onclick="showPage(1)">
-
+    class="secondary-btn"
+    onclick="showPage(1)">
       ← Retour
-
     </button>
 
-
     <button
-      class="main-btn"
-      onclick="goToBilan()">
-
+    class="main-btn"
+    onclick="goToBilan()">
       Continuer →
-
     </button>
 
   </div>
@@ -1008,23 +762,17 @@ select option{
 </section>
 
 
-<!-- =====================================================
-     PAGE 3
-===================================================== -->
+<!-- PAGE 3 -->
 
 <section
-  class="page"
-  id="page3">
+class="page"
+id="page3">
 
   <div class="page-header">
 
-    <small>
-      ÉTAPE 02 / 04
-    </small>
+    <small>ÉTAPE 02 / 04</small>
 
-    <h2>
-      Bilan XABCDE
-    </h2>
+    <h2>Bilan XABCDE</h2>
 
     <p>
       Évaluation structurée de la victime.
@@ -1032,3185 +780,13 @@ select option{
 
   </div>
 
-
   <div class="progress">
-
     <div class="active"></div>
     <div class="active"></div>
     <div></div>
     <div></div>
-
   </div>
-
-
-  <!-- X -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        X
-      </div>
-
-      <div>
-
-        <strong>
-          Hémorragie
-        </strong>
-
-        <small>
-          Recherche d'une hémorragie grave
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('X','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('X','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-X">
-    </div>
-
-  </div>
-
-
-  <!-- A -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        A
-      </div>
-
-      <div>
-
-        <strong>
-          Airway
-        </strong>
-
-        <small>
-          Voies aériennes
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('A','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('A','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-A">
-    </div>
-
-  </div>
-
-
-  <!-- B -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        B
-      </div>
-
-      <div>
-
-        <strong>
-          Respiration
-        </strong>
-
-        <small>
-          Évaluation respiratoire
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('B','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('B','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-B">
-    </div>
-
-  </div>
-
-
-  <!-- C -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        C
-      </div>
-
-      <div>
-
-        <strong>
-          Circulation
-        </strong>
-
-        <small>
-          Évaluation circulatoire
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('C','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('C','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-C">
-    </div>
-
-  </div>
-
-
-  <!-- D -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        D
-      </div>
-
-      <div>
-
-        <strong>
-          Neurologique
-        </strong>
-
-        <small>
-          Conscience et état neurologique
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('D','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('D','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-D">
-    </div>
-
-  </div>
-
-
-  <!-- E -->
-
-  <div class="assessment">
-
-    <div class="assessment-head">
-
-      <div class="badge">
-        E
-      </div>
-
-      <div>
-
-        <strong>
-          Exposition
-        </strong>
-
-        <small>
-          Recherche d'anomalies complémentaires
-        </small>
-
-      </div>
-
-    </div>
-
-
-    <div class="assessment-actions">
-
-      <button
-        class="choice"
-        onclick="answer('E','yes',this)">
-
-        ANORMAL
-
-      </button>
-
-
-      <button
-        class="choice normal"
-        onclick="answer('E','no',this)">
-
-        NORMAL
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="result"
-      id="result-E">
-    </div>
-
-  </div>
-
-
-  <div class="footer-actions">
-
-    <button
-      class="secondary-btn"
-      onclick="showPage(2)">
-
-      ← Identité
-
-    </button>
-
-
-    <button
-      class="main-btn"
-      onclick="goToConstantes()">
-
-      Constantes →
-
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     PAGE 4
-===================================================== -->
-
-<section
-  class="page"
-  id="page4">
-
-  <div class="page-header">
-
-    <small>
-      ÉTAPE 03 / 04
-    </small>
-
-    <h2>
-      Constantes & synthèse
-    </h2>
-
-    <p>
-      Complétez les constantes et les éléments utiles.
-    </p>
-
-  </div>
-
-
-  <div class="progress">
-
-    <div class="active"></div>
-    <div class="active"></div>
-    <div class="active"></div>
-    <div></div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-
-      <div class="badge">
-        ♥
-      </div>
-
-      Constantes
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        FR — FRÉQUENCE RESPIRATOIRE
-      </label>
-
-      <input
-        id="fr"
-        type="text"
-        placeholder="Nombre / min">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        FC — FRÉQUENCE CARDIAQUE
-      </label>
-
-      <input
-        id="fc"
-        type="text"
-        placeholder="Nombre / min">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        SATURATION SpO₂
-      </label>
-
-      <input
-        id="spo2"
-        type="text"
-        placeholder="%">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        PRESSION ARTÉRIELLE
-      </label>
-
-      <input
-        id="pa"
-        type="text"
-        placeholder="Ex : 120 / 80 mmHg">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        GLYCÉMIE
-      </label>
-
-      <input
-        id="glycemie"
-        type="text"
-        placeholder="Valeur">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        TEMPÉRATURE
-      </label>
-
-      <input
-        id="temperature"
-        type="text"
-        placeholder="°C">
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        DOULEUR
-      </label>
-
-      <select id="douleur">
-
-        <option value="">
-          Non renseignée
-        </option>
-
-        <option>
-          0 — Aucune
-        </option>
-
-        <option>
-          1 à 3 — Faible
-        </option>
-
-        <option>
-          4 à 6 — Modérée
-        </option>
-
-        <option>
-          7 à 9 — Forte
-        </option>
-
-        <option>
-          10 — Maximale
-        </option>
-
-      </select>
-
-    </div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-
-      <div class="badge">
-        ✚
-      </div>
-
-      Gestes réalisés
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        GESTES / ACTIONS
-      </label>
-
-      <textarea
-        id="gestes"
-        placeholder="Gestes réalisés, surveillance, oxygène, pansement, positionnement..."></textarea>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        ÉVOLUTION
-      </label>
-
-      <textarea
-        id="evolution"
-        placeholder="Évolution de l'état de la victime..."></textarea>
-
-    </div>
-
-
-    <div class="field">
-
-      <label>
-        OBSERVATIONS
-      </label>
-
-      <textarea
-        id="observations"
-        placeholder="Informations complémentaires..."></textarea>
-
-    </div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-
-      <div class="badge">
-        ✓
-      </div>
-
-      Synthèse
-
-    </div>
-
-
-    <div class="summary">
-
-      <div class="summary-row">
-        <span>Victime</span>
-        <span id="summaryName">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Âge</span>
-        <span id="summaryAge">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Motif</span>
-        <span id="summaryMotif">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>FR</span>
-        <span id="summaryFR">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>FC</span>
-        <span id="summaryFC">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>SpO₂</span>
-        <span id="summarySpO2">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>PA</span>
-        <span id="summaryPA">—</span>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="footer-actions">
-
-    <button
-      class="secondary-btn"
-      onclick="showPage(3)">
-
-      ← Bilan
-
-    </button>
-
-
-    <button
-      class="main-btn"
-      onclick="finaliserBilan()">
-
-      ✓ Finaliser
-
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     PAGE 5
-===================================================== -->
-
-<section class="page" id="page6">
-
-  <div class="page-header">
-    <small>CONFIGURATION</small>
-    <h2>⚙ PARAMÈTRES</h2>
-    <p>Personnalisez votre expérience BILANPRO.</p>
-  </div>
-
-  <div class="card">
-    <h3>👤 Informations du secouriste</h3>
-
-    <label>Nom</label>
-    <input type="text" id="paramNom" placeholder="Votre nom">
-
-    <label>Prénom</label>
-    <input type="text" id="paramPrenom" placeholder="Votre prénom">
-
-    <label>Matricule</label>
-    <input type="text" id="paramMatricule" placeholder="Matricule">
-
-    <label>Centre / service</label>
-    <input type="text" id="paramCentre" placeholder="Ex : CS Grandvilliers">
-  </div>
-
-  <div class="card">
-    <h3>🚒 Fonction</h3>
-
-    <select id="paramFonction">
-      <option value="">Sélectionner</option>
-      <option>Équipier</option>
-      <option>Chef d'équipe</option>
-      <option>Chef d'agrès</option>
-    </select>
-  </div>
-
-  <div class="card">
-    <h3>🔊 Sons</h3>
-<div class="card">
-  <h3>🔔 Notifications</h3>
-
-  <p>
-    Recevez les alertes BILANPRO directement sur votre téléphone.
-  </p>
-
-  <button
-    class="btn-primary"
-    onclick="activerNotifications()">
-    🔔 ACTIVER LES NOTIFICATIONS
-  </button>
-
-  <p id="notificationStatus"
-     style="margin-top:12px;font-size:13px;opacity:.7;">
-    Notifications non activées
-  </p>
-</div>
-    <label style="display:flex;align-items:center;gap:10px;">
-      <input type="checkbox" id="paramSons" checked>
-      Activer les sons de l'application
-    </label>
-  </div>
-
-  <div class="card">
-    <h3>ℹ️ À propos</h3>
-    <p><strong>BILANPRO V1</strong></p>
-    <p>Bilan de matériel pour secouristes</p>
-    <p>Version 1.0</p>
-  </div>
-
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;">
-    <button class="btn-primary" onclick="sauvegarderParametres()">
-      💾 ENREGISTRER
-    </button>
-
-    <button class="btn-secondary" onclick="showPage(1)">
-      ← RETOUR
-    </button>
-  </div>
-
-</section>
-  <section
-  class="page"
-  id="page5">
-
-  <div class="page-header">
-
-    <small>
-      ÉTAPE 04 / 04
-    </small>
-
-    <h2>
-      Transmission bilan
-    </h2>
-
-    <p>
-      Vérifiez le bilan avant de générer le document.
-    </p>
-
-  </div>
-
-
-  <div class="progress">
-
-    <div class="active"></div>
-    <div class="active"></div>
-    <div class="active"></div>
-    <div class="active"></div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-
-      <div class="badge">
-        ✓
-      </div>
-
-      Bilan terminé
-
-    </div>
-
-
-    <div class="summary">
-
-      <div class="summary-row">
-        <span>Nom / Prénom</span>
-        <span id="finalName">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Âge</span>
-        <span id="finalAge">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Sexe</span>
-        <span id="finalSexe">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Lieu</span>
-        <span id="finalLieu">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>Motif</span>
-        <span id="finalMotif">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>FR</span>
-        <span id="finalFR">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>FC</span>
-        <span id="finalFC">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>SpO₂</span>
-        <span id="finalSpO2">—</span>
-      </div>
-
-      <div class="summary-row">
-        <span>PA</span>
-        <span id="finalPA">—</span>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-
-      <div class="badge">
-        📄
-      </div>
-
-      Transmission du bilan
-
-    </div>
-
-
-    <div class="info-box">
-
-      Le bouton ci-dessous génère automatiquement un
-      <strong>PDF du bilan</strong> avec l'identité de la victime,
-      le bilan XABCDE, les constantes et les actions réalisées.
-
-    </div>
-
-
-    <button
-      class="main-btn pdf-btn"
-      onclick="genererPDF()">
-
-      📄 TRANSMISSION BILAN
-
-    </button>
-
-  </div>
-
-
-  <div class="footer-actions">
-
-    <button
-      class="secondary-btn"
-      onclick="showPage(4)">
-
-      ← Modifier
-
-    </button>
-
-
-    <button
-      class="main-btn"
-      onclick="newBilan()">
-
-      ＋ Nouveau bilan
-
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     MODAL
-===================================================== -->
-
-<div
-  class="modal"
-  id="modal">
-
-  <div class="modal-box">
-
-    <div class="modal-header">
-
-      <div>
-
-        <small
-          id="modalStep"
-          style="color:#e21d25;font-weight:bold">
-
-          ÉVALUATION
-
-        </small>
-
-        <h2 id="modalTitle">
-          Évaluation
-        </h2>
-
-      </div>
-
-
-      <button
-        class="close"
-        onclick="closeModal()">
-
-        ×
-
-      </button>
-
-    </div>
-
-
-    <div id="modalContent"></div>
-
-
-    <button
-      class="main-btn"
-      onclick="validateModal()">
-
-      ✓ ENREGISTRER
-
-    </button>
-
-  </div>
-
-</div>
-
-
-<!-- TOAST -->
-
-<div
-  class="toast"
-  id="toast">
-</div>
 
 
 <script>
-
-/* =====================================================
-   DONNEES XABCDE
-===================================================== */
-
-const bilanData = {
-
-  X:{
-    title:"X — Hémorragie",
-
-    fields:[
-
-      [
-        "type",
-        "Type d'hémorragie",
-        "select",
-        [
-          "Externe",
-          "Interne suspectée",
-          "Non précisé"
-        ]
-      ],
-
-      [
-        "localisation",
-        "Localisation",
-        "text"
-      ],
-
-      [
-        "geste",
-        "Geste réalisé",
-        "text"
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  },
-
-
-  A:{
-    title:"A — Airway",
-
-    fields:[
-
-      [
-        "situation",
-        "Situation constatée",
-        "select",
-        [
-          "Voies aériennes libres",
-          "Obstruction partielle",
-          "Obstruction complète",
-          "Autre"
-        ]
-      ],
-
-      [
-        "fr",
-        "Fréquence respiratoire",
-        "text"
-      ],
-
-      [
-        "anomalie",
-        "Anomalie observée",
-        "text"
-      ],
-
-      [
-        "geste",
-        "Geste réalisé",
-        "text"
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  },
-
-
-  B:{
-    title:"B — Respiration",
-
-    fields:[
-
-      [
-        "fr",
-        "Fréquence respiratoire",
-        "text"
-      ],
-
-      [
-        "spo2",
-        "SpO₂",
-        "text"
-      ],
-
-      [
-        "respiration",
-        "Respiration",
-        "select",
-        [
-          "Normale",
-          "Difficile",
-          "Rapide",
-          "Lente",
-          "Irrégulière",
-          "Autre"
-        ]
-      ],
-
-      [
-        "oxygen",
-        "Oxygène",
-        "select",
-        [
-          "Non",
-          "Oui"
-        ]
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  },
-
-
-  C:{
-    title:"C — Circulation",
-
-    fields:[
-
-      [
-        "fc",
-        "Fréquence cardiaque",
-        "text"
-      ],
-
-      [
-        "pouls",
-        "Pouls",
-        "select",
-        [
-          "Régulier",
-          "Irrégulier",
-          "Faible",
-          "Fort",
-          "Non perceptible"
-        ]
-      ],
-
-      [
-        "pa",
-        "Pression artérielle",
-        "text"
-      ],
-
-      [
-        "coloration",
-        "Coloration",
-        "select",
-        [
-          "Normale",
-          "Pâle",
-          "Cyanose",
-          "Rougeur",
-          "Autre"
-        ]
-      ],
-
-      [
-        "signes",
-        "Signes circulatoires anormaux",
-        "text"
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  },
-
-
-  D:{
-    title:"D — Neurologique",
-
-    fields:[
-
-      [
-        "conscience",
-        "Conscience",
-        "select",
-        [
-          "Conscient",
-          "Confus",
-          "Somnolent",
-          "Inconscient"
-        ]
-      ],
-
-      [
-        "gcs",
-        "Score de Glasgow",
-        "text"
-      ],
-
-      [
-        "pupilles",
-        "Pupilles",
-        "select",
-        [
-          "Normales",
-          "Anisocorie",
-          "Réactives",
-          "Non réactives",
-          "Autre"
-        ]
-      ],
-
-      [
-        "anomalie",
-        "Anomalie neurologique",
-        "text"
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  },
-
-
-  E:{
-    title:"E — Exposition",
-
-    fields:[
-
-      [
-        "anomalie",
-        "Anomalie constatée",
-        "text"
-      ],
-
-      [
-        "localisation",
-        "Localisation",
-        "text"
-      ],
-
-      [
-        "douleur",
-        "Douleur",
-        "text"
-      ],
-
-      [
-        "observations",
-        "Observations",
-        "textarea"
-      ]
-
-    ]
-  }
-
-};
-
-
-let currentLetter = null;
-
-let bilanResults = {};
-
-
-/* =====================================================
-   HORLOGE
-===================================================== */
-
-function updateClock(){
-
-  const now = new Date();
-
-  const h =
-    String(now.getHours()).padStart(2,"0");
-
-  const m =
-    String(now.getMinutes()).padStart(2,"0");
-
-  const s =
-    String(now.getSeconds()).padStart(2,"0");
-
-
-  document.getElementById("clock")
-    .textContent =
-    h + ":" + m + ":" + s;
-
-}
-
-setInterval(updateClock,1000);
-
-updateClock();
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-function showPage(number){
-
-  document
-    .querySelectorAll(".page")
-    .forEach(page=>{
-
-      page.classList.remove("active");
-
-    });
-
-
-  const page =
-    document.getElementById(
-      "page"+number
-    );
-
-
-  if(page){
-
-    page.classList.add("active");
-
-
-    window.scrollTo({
-
-      top:0,
-
-      behavior:"smooth"
-
-    });
-
-  }
-
-}
-
-
-/* =====================================================
-   PAGE 2 -> 3
-===================================================== */
-
-function goToBilan(){
-
-  const nom =
-    document.getElementById("nom")
-      .value.trim();
-
-  const prenom =
-    document.getElementById("prenom")
-      .value.trim();
-
-
-  if(!nom && !prenom){
-
-    showToast(
-      "Renseignez au moins le nom ou le prénom."
-    );
-
-    return;
-
-  }
-
-
-  showPage(3);
-
-}
-
-
-/* =====================================================
-   PAGE 3 -> 4
-===================================================== */
-
-function goToConstantes(){
-
-  updateSummary();
-
-  showPage(4);
-
-}
-
-
-/* =====================================================
-   REPONSE XABCDE
-===================================================== */
-
-function answer(letter,type,button){
-
-  const parent =
-    button.parentElement;
-
-
-  parent
-    .querySelectorAll(".choice")
-    .forEach(btn=>{
-
-      btn.classList.remove(
-        "selected"
-      );
-
-    });
-
-
-  button.classList.add(
-    "selected"
-  );
-
-
-  if(type === "no"){
-
-    bilanResults[letter] = {
-
-      status:"Normal",
-
-      values:{}
-
-    };
-
-
-    const result =
-      document.getElementById(
-        "result-"+letter
-      );
-
-
-    result.innerHTML =
-      "✓ <strong>Évaluation renseignée :</strong> absence d'anomalie signalée.";
-
-
-    result.classList.add(
-      "show"
-    );
-
-
-  }else{
-
-    openModal(letter);
-
-  }
-
-}
-
-
-/* =====================================================
-   MODAL
-===================================================== */
-
-function openModal(letter){
-
-  currentLetter = letter;
-
-
-  const data =
-    bilanData[letter];
-
-
-  document.getElementById(
-    "modalStep"
-  ).textContent =
-    "ÉVALUATION";
-
-
-  document.getElementById(
-    "modalTitle"
-  ).textContent =
-    data.title;
-
-
-  const content =
-    document.getElementById(
-      "modalContent"
-    );
-
-
-  content.innerHTML = "";
-
-
-  data.fields.forEach(field=>{
-
-    const id =
-      field[0];
-
-    const label =
-      field[1];
-
-    const type =
-      field[2];
-
-
-    const wrapper =
-      document.createElement(
-        "div"
-      );
-
-
-    wrapper.className =
-      "field";
-
-
-    const lab =
-      document.createElement(
-        "label"
-      );
-
-
-    lab.textContent =
-      label;
-
-
-    wrapper.appendChild(
-      lab
-    );
-
-
-    if(type === "textarea"){
-
-      const textarea =
-        document.createElement(
-          "textarea"
-        );
-
-
-      textarea.id =
-        "modal-"+id;
-
-
-      textarea.placeholder =
-        label;
-
-
-      wrapper.appendChild(
-        textarea
-      );
-
-
-    }else if(type === "select"){
-
-      const select =
-        document.createElement(
-          "select"
-        );
-
-
-      select.id =
-        "modal-"+id;
-
-
-      const first =
-        document.createElement(
-          "option"
-        );
-
-
-      first.value = "";
-
-      first.textContent =
-        "Sélectionner";
-
-
-      select.appendChild(
-        first
-      );
-
-
-      field[3].forEach(option=>{
-
-        const opt =
-          document.createElement(
-            "option"
-          );
-
-
-        opt.value =
-          option;
-
-        opt.textContent =
-          option;
-
-
-        select.appendChild(
-          opt
-        );
-
-      });
-
-
-      wrapper.appendChild(
-        select
-      );
-
-
-    }else{
-
-      const input =
-        document.createElement(
-          "input"
-        );
-
-
-      input.id =
-        "modal-"+id;
-
-
-      input.type =
-        "text";
-
-
-      input.placeholder =
-        label;
-
-
-      wrapper.appendChild(
-        input
-      );
-
-    }
-
-
-    content.appendChild(
-      wrapper
-    );
-
-  });
-
-
-  document
-    .getElementById("modal")
-    .classList.add("show");
-
-}
-
-
-/* =====================================================
-   VALIDATION MODAL
-===================================================== */
-
-function validateModal(){
-
-  if(!currentLetter){
-    return;
-  }
-
-
-  const data =
-    bilanData[currentLetter];
-
-
-  const values = {};
-
-
-  data.fields.forEach(field=>{
-
-    const id =
-      field[0];
-
-
-    const element =
-      document.getElementById(
-        "modal-"+id
-      );
-
-
-    if(element){
-
-      values[field[1]] =
-        element.value;
-
-    }
-
-  });
-
-
-  bilanResults[currentLetter] = {
-
-    status:"Anormal",
-
-    values:values
-
-  };
-
-
-  let text =
-    "<strong>Évaluation renseignée</strong><br>";
-
-
-  Object.entries(values)
-    .forEach(([key,value])=>{
-
-      if(value){
-
-        text +=
-          "• " +
-          key +
-          " : " +
-          value +
-          "<br>";
-
-      }
-
-    });
-
-
-  const result =
-    document.getElementById(
-      "result-"+currentLetter
-    );
-
-
-  result.innerHTML =
-    text;
-
-
-  result.classList.add(
-    "show"
-  );
-
-
-  closeModal();
-
-
-  showToast(
-    "Évaluation enregistrée."
-  );
-
-}
-
-
-/* =====================================================
-   FERMER MODAL
-===================================================== */
-
-function closeModal(){
-
-  document
-    .getElementById("modal")
-    .classList.remove(
-      "show"
-    );
-
-}
-
-
-/* =====================================================
-   RESUME
-===================================================== */
-
-function updateSummary(){
-
-  const nom =
-    document.getElementById("nom")
-      .value.trim();
-
-  const prenom =
-    document.getElementById("prenom")
-      .value.trim();
-
-  const age =
-    document.getElementById("age")
-      .value.trim();
-
-  const motif =
-    document.getElementById("motif")
-      .value.trim();
-
-  const fr =
-    document.getElementById("fr")
-      .value.trim();
-
-  const fc =
-    document.getElementById("fc")
-      .value.trim();
-
-  const spo2 =
-    document.getElementById("spo2")
-      .value.trim();
-
-  const pa =
-    document.getElementById("pa")
-      .value.trim();
-
-
-  document.getElementById(
-    "summaryName"
-  ).textContent =
-    (prenom+" "+nom).trim() || "—";
-
-
-  document.getElementById(
-    "summaryAge"
-  ).textContent =
-    age ? age+" ans" : "—";
-
-
-  document.getElementById(
-    "summaryMotif"
-  ).textContent =
-    motif || "—";
-
-
-  document.getElementById(
-    "summaryFR"
-  ).textContent =
-    fr ? fr+" / min" : "—";
-
-
-  document.getElementById(
-    "summaryFC"
-  ).textContent =
-    fc ? fc+" / min" : "—";
-
-
-  document.getElementById(
-    "summarySpO2"
-  ).textContent =
-    spo2 ? spo2+" %" : "—";
-
-
-  document.getElementById(
-    "summaryPA"
-  ).textContent =
-    pa || "—";
-
-}
-
-
-/* =====================================================
-   FINALISER
-===================================================== */
-
-function finaliserBilan(){
-
-  updateSummary();
-
-
-  document.getElementById(
-    "finalName"
-  ).textContent =
-    document.getElementById(
-      "summaryName"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalAge"
-  ).textContent =
-    document.getElementById(
-      "summaryAge"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalSexe"
-  ).textContent =
-    document.getElementById(
-      "sexe"
-    ).value || "—";
-
-
-  document.getElementById(
-    "finalLieu"
-  ).textContent =
-    document.getElementById(
-      "lieu"
-    ).value || "—";
-
-
-  document.getElementById(
-    "finalMotif"
-  ).textContent =
-    document.getElementById(
-      "summaryMotif"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalFR"
-  ).textContent =
-    document.getElementById(
-      "summaryFR"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalFC"
-  ).textContent =
-    document.getElementById(
-      "summaryFC"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalSpO2"
-  ).textContent =
-    document.getElementById(
-      "summarySpO2"
-    ).textContent;
-
-
-  document.getElementById(
-    "finalPA"
-  ).textContent =
-    document.getElementById(
-      "summaryPA"
-    ).textContent;
-
-
-  showPage(5);
-
-
-  showToast(
-    "Bilan finalisé."
-  );
-
-}
-
-
-/* =====================================================
-   AJOUT TEXTE PDF
-===================================================== */
-
-function ajouterTextePDF(doc,text,x,y,maxWidth,lineHeight){
-
-  const lignes =
-    doc.splitTextToSize(
-      String(text || ""),
-      maxWidth
-    );
-
-
-  doc.text(
-    lignes,
-    x,
-    y
-  );
-
-
-  return y +
-    (lignes.length * lineHeight);
-
-}
-
-
-/* =====================================================
-   TITRE PDF
-===================================================== */
-
-function titrePDF(doc,titre,y){
-
-  doc.setFillColor(
-    215,
-    25,
-    32
-  );
-
-
-  doc.rect(
-    15,
-    y-6,
-    180,
-    9,
-    "F"
-  );
-
-
-  doc.setTextColor(
-    255,
-    255,
-    255
-  );
-
-
-  doc.setFontSize(
-    11
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    titre,
-    20,
-    y
-  );
-
-
-  doc.setTextColor(
-    0,
-    0,
-    0
-  );
-
-
-  return y + 10;
-
-}
-
-
-/* =====================================================
-   NOUVELLE PAGE PDF SI NECESSAIRE
-===================================================== */
-
-function verifierPagePDF(doc,y){
-
-  if(y > 270){
-
-    doc.addPage();
-
-    y = 20;
-
-  }
-
-  return y;
-
-}
-
-
-/* =====================================================
-   GENERATION PDF
-===================================================== */
-
-function genererPDF(){
-
-  if(!window.jspdf){
-
-    showToast(
-      "Le générateur PDF n'est pas disponible."
-    );
-
-    return;
-
-  }
-
-
-  const {
-    jsPDF
-  } = window.jspdf;
-
-
-  const doc =
-    new jsPDF({
-      orientation:"portrait",
-      unit:"mm",
-      format:"a4"
-    });
-
-
-  const nom =
-    document.getElementById(
-      "nom"
-    ).value.trim();
-
-
-  const prenom =
-    document.getElementById(
-      "prenom"
-    ).value.trim();
-
-
-  const age =
-    document.getElementById(
-      "age"
-    ).value.trim();
-
-
-  const sexe =
-    document.getElementById(
-      "sexe"
-    ).value || "Non renseigné";
-
-
-  const lieu =
-    document.getElementById(
-      "lieu"
-    ).value.trim();
-
-
-  const motif =
-    document.getElementById(
-      "motif"
-    ).value.trim();
-
-
-  const fr =
-    document.getElementById(
-      "fr"
-    ).value.trim();
-
-
-  const fc =
-    document.getElementById(
-      "fc"
-    ).value.trim();
-
-
-  const spo2 =
-    document.getElementById(
-      "spo2"
-    ).value.trim();
-
-
-  const pa =
-    document.getElementById(
-      "pa"
-    ).value.trim();
-
-
-  const glycemie =
-    document.getElementById(
-      "glycemie"
-    ).value.trim();
-
-
-  const temperature =
-    document.getElementById(
-      "temperature"
-    ).value.trim();
-
-
-  const douleur =
-    document.getElementById(
-      "douleur"
-    ).value || "Non renseignée";
-
-
-  const gestes =
-    document.getElementById(
-      "gestes"
-    ).value.trim();
-
-
-  const evolution =
-    document.getElementById(
-      "evolution"
-    ).value.trim();
-
-
-  const observations =
-    document.getElementById(
-      "observations"
-    ).value.trim();
-
-
-  const victime =
-    (prenom+" "+nom).trim()
-    || "Victime non identifiée";
-
-
-  /* =========================
-     EN-TETE
-  ========================= */
-
-  doc.setFillColor(
-    215,
-    25,
-    32
-  );
-
-
-  doc.rect(
-    0,
-    0,
-    210,
-    28,
-    "F"
-  );
-
-
-  doc.setTextColor(
-    255,
-    255,
-    255
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.setFontSize(
-    21
-  );
-
-
-  doc.text(
-    "BILANPRO",
-    15,
-    13
-  );
-
-
-  doc.setFontSize(
-    9
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "normal"
-  );
-
-
-  doc.text(
-    "TRANSMISSION BILAN NUMERIQUE",
-    15,
-    21
-  );
-
-
-  doc.setTextColor(
-    0,
-    0,
-    0
-  );
-
-
-  let y = 39;
-
-
-  /* =========================
-     IDENTITE
-  ========================= */
-
-  y =
-    titrePDF(
-      doc,
-      "IDENTITE DE LA VICTIME",
-      y
-    );
-
-
-  doc.setFontSize(
-    10
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    "Nom / Prenom :",
-    20,
-    y
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "normal"
-  );
-
-
-  doc.text(
-    victime,
-    60,
-    y
-  );
-
-
-  y += 7;
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    "Age :",
-    20,
-    y
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "normal"
-  );
-
-
-  doc.text(
-    age ? age+" ans" : "Non renseigne",
-    60,
-    y
-  );
-
-
-  y += 7;
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    "Sexe :",
-    20,
-    y
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "normal"
-  );
-
-
-  doc.text(
-    sexe,
-    60,
-    y
-  );
-
-
-  y += 7;
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    "Lieu :",
-    20,
-    y
-  );
-
-
-  doc.setFont(
-    "helvetica",
-    "normal"
-  );
-
-
-  y =
-    ajouterTextePDF(
-      doc,
-      lieu || "Non renseigne",
-      60,
-      y,
-      130,
-      5
-    );
-
-
-  y += 3;
-
-
-  doc.setFont(
-    "helvetica",
-    "bold"
-  );
-
-
-  doc.text(
-    "Motif :",
-    20,
-    y
-  );
-
-
-  y =
-    ajouterTextePDF(
-      doc,
-      motif || "Non renseigne",
-      60,
-      y,
-      130,
-      5
-    );
-
-
-  y += 8;
-
-
-  /* =========================
-     XABCDE
-  ========================= */
-
-  y =
-    verifierPagePDF(
-      doc,
-      y
-    );
-
-
-  y =
-    titrePDF(
-      doc,
-      "BILAN XABCDE",
-      y
-    );
-
-
-  const lettres =
-    ["X","A","B","C","D","E"];
-
-
-  lettres.forEach(letter=>{
-
-    y =
-      verifierPagePDF(
-        doc,
-        y
-      );
-
-
-    const data =
-      bilanResults[letter];
-
-
-    doc.setFillColor(
-      240,
-      240,
-      240
-    );
-
-
-    doc.roundedRect(
-      18,
-      y-5,
-      174,
-      8,
-      2,
-      2,
-      "F"
-    );
-
-
-    doc.setTextColor(
-      215,
-      25,
-      32
-    );
-
-
-    doc.setFont(
-      "helvetica",
-      "bold"
-    );
-
-
-    doc.setFontSize(
-      10
-    );
-
-
-    doc.text(
-      letter,
-      22,
-      y
-    );
-
-
-    doc.setTextColor(
-      0,
-      0,
-      0
-    );
-
-
-    doc.setFont(
-      "helvetica",
-      "bold"
-    );
-
-
-    doc.text(
-      bilanData[letter].title
-        .replace(letter+" — ",""),
-      31,
-      y
-    );
-
-
-    y += 8;
-
-
-    doc.setFont(
-      "helvetica",
-      "normal"
-    );
-
-
-    if(!data){
-
-      doc.text(
-        "Non renseigne",
-        25,
-        y
-      );
-
-      y += 7;
-
-      return;
-
-    }
-
-
-    doc.text(
-      "Etat : "+data.status,
-      25,
-      y
-    );
-
-
-    y += 6;
-
-
-    if(
-      data.values &&
-      Object.keys(data.values).length
-    ){
-
-      Object.entries(
-        data.values
-      ).forEach(
-        ([key,value])=>{
-
-          if(!value){
-            return;
-          }
-
-
-          y =
-            verifierPagePDF(
-              doc,
-              y
-            );
-
-
-          doc.setFontSize(
-            9
-          );
-
-
-          doc.setFont(
-            "helvetica",
-            "bold"
-          );
-
-
-          doc.text(
-            key+" :",
-            27,
-            y
-          );
-
-
-          doc.setFont(
-            "helvetica",
-            "normal"
-          );
-
-
-          y =
-            ajouterTextePDF(
-              doc,
-              value,
-              72,
-              y,
-              115,
-              4.5
-            );
-
-
-          y += 2;
-
-        }
-      );
-
-    }
-
-
-    y += 3;
-
-  });
-
-
-  /* =========================
-     CONSTANTES
-  ========================= */
-
-  y =
-    verifierPagePDF(
-      doc,
-      y
-    );
-
-
-  y =
-    titrePDF(
-      doc,
-      "CONSTANTES",
-      y
-    );
-
-
-  doc.setFontSize(
-    10
-  );
-
-
-  const constantes = [
-
-    [
-      "FR — Frequence respiratoire",
-      fr ? fr+" / min" : "Non renseignee"
-    ],
-
-    [
-      "FC — Frequence cardiaque",
-      fc ? fc+" / min" : "Non renseignee"
-    ],
-
-    [
-      "SpO2",
-      spo2 ? spo2+" %" : "Non renseignee"
-    ],
-
-    [
-      "Pression arterielle",
-      pa || "Non renseignee"
-    ],
-
-    [
-      "Glycemie",
-      glycemie || "Non renseignee"
-    ],
-
-    [
-      "Temperature",
-      temperature || "Non renseignee"
-    ],
-
-    [
-      "Douleur",
-      douleur
-    ]
-
-  ];
-
-
-  constantes.forEach(
-    ([label,value])=>{
-
-      y =
-        verifierPagePDF(
-          doc,
-          y
-        );
-
-
-      doc.setFont(
-        "helvetica",
-        "bold"
-      );
-
-
-      doc.text(
-        label+" :",
-        20,
-        y
-      );
-
-
-      doc.setFont(
-        "helvetica",
-        "normal"
-      );
-
-
-      doc.text(
-        value,
-        75,
-        y
-      );
-
-
-      y += 7;
-
-    }
-  );
-
-
-  /* =========================
-     GESTES
-  ========================= */
-
-  y += 3;
-
-
-  y =
-    verifierPagePDF(
-      doc,
-      y
-    );
-
-
-  y =
-    titrePDF(
-      doc,
-      "GESTES / ACTIONS REALISES",
-      y
-    );
-
-
-  y =
-    ajouterTextePDF(
-      doc,
-      gestes || "Aucun geste renseigne",
-      20,
-      y,
-      170,
-      5
-    );
-
-
-  y += 8;
-
-
-  /* =========================
-     EVOLUTION
-  ========================= */
-
-  y =
-    verifierPagePDF(
-      doc,
-      y
-    );
-
-
-  y =
-    titrePDF(
-      doc,
-      "EVOLUTION",
-      y
-    );
-
-
-  y =
-    ajouterTextePDF(
-      doc,
-      evolution || "Non renseignee",
-      20,
-      y,
-      170,
-      5
-    );
-
-
-  y += 8;
-
-
-  /* =========================
-     OBSERVATIONS
-  ========================= */
-
-  y =
-    verifierPagePDF(
-      doc,
-      y
-    );
-
-
-  y =
-    titrePDF(
-      doc,
-      "OBSERVATIONS",
-      y
-    );
-
-
-  y =
-    ajouterTextePDF(
-      doc,
-      observations || "Aucune observation",
-      20,
-      y,
-      170,
-      5
-    );
-
-
-  /* =========================
-     PIED DE PAGE
-  ========================= */
-
-  const totalPages =
-    doc.internal.getNumberOfPages();
-
-
-  for(
-    let i=1;
-    i<=totalPages;
-    i++
-  ){
-
-    doc.setPage(i);
-
-
-    doc.setFontSize(
-      8
-    );
-
-
-    doc.setTextColor(
-      120,
-      120,
-      120
-    );
-
-
-    doc.text(
-      "BILANPRO — Document de transmission",
-      15,
-      290
-    );
-
-
-    doc.text(
-      "Page "+i+" / "+totalPages,
-      170,
-      290
-    );
-
-  }
-
-
-  /* =========================
-     NOM DU FICHIER
-  ========================= */
-
-  let nomFichier =
-    (nom+"_"+prenom)
-      .trim()
-      .replace(
-        /[^a-zA-Z0-9À-ÿ_-]/g,
-        "_"
-      );
-
-
-  if(!nomFichier){
-
-    nomFichier =
-      "Victime";
-
-  }
-
-
-  nomFichier =
-    "BILANPRO_"+nomFichier+".pdf";
-
-
-  doc.save(
-    nomFichier
-  );
-
-
-  showToast(
-    "PDF du bilan généré."
-  );
-
-}
-
-
-/* =====================================================
-   NOUVEAU BILAN
-===================================================== */
-
-function newBilan(){
-
-  document
-    .querySelectorAll(
-      "#page2 input,#page2 textarea"
-    )
-    .forEach(
-      element=>{
-        element.value="";
-      }
-    );
-
-
-  document
-    .querySelectorAll(
-      "#page2 select"
-    )
-    .forEach(
-      element=>{
-        element.selectedIndex=0;
-      }
-    );
-
-
-  document
-    .querySelectorAll(
-      "#page4 input,#page4 textarea"
-    )
-    .forEach(
-      element=>{
-        element.value="";
-      }
-    );
-
-
-  document
-    .querySelectorAll(
-      "#page4 select"
-    )
-    .forEach(
-      element=>{
-        element.selectedIndex=0;
-      }
-    );
-
-
-  document
-    .querySelectorAll(
-      ".choice"
-    )
-    .forEach(
-      button=>{
-        button.classList.remove(
-          "selected"
-        );
-      }
-    );
-
-
-  document
-    .querySelectorAll(
-      ".result"
-    )
-    .forEach(
-      result=>{
-
-        result.classList.remove(
-          "show"
-        );
-
-        result.innerHTML="";
-
-      }
-    );
-
-function sauvegarderParametres() {
-  const parametres = {
-    nom: document.getElementById("paramNom").value,
-    prenom: document.getElementById("paramPrenom").value,
-    matricule: document.getElementById("paramMatricule").value,
-    centre: document.getElementById("paramCentre").value,
-    fonction: document.getElementById("paramFonction").value,
-    sons: document.getElementById("paramSons").checked
-  };
-
-  localStorage.setItem("BILANPRO_PARAMETRES", JSON.stringify(parametres));
-
-  if (typeof showToast === "function") {
-    showToast("Paramètres enregistrés ✅");
-  } else {
-    alert("Paramètres enregistrés ✅");
-  }
-}
-
-function chargerParametres() {
-  const sauvegarde = localStorage.getItem("BILANPRO_PARAMETRES");
-
-  if (!sauvegarde) return;
-
-  const parametres = JSON.parse(sauvegarde);
-
-  document.getElementById("paramNom").value = parametres.nom || "";
-  document.getElementById("paramPrenom").value = parametres.prenom || "";
-  document.getElementById("paramMatricule").value = parametres.matricule || "";
-  document.getElementById("paramCentre").value = parametres.centre || "";
-  document.getElementById("paramFonction").value = parametres.fonction || "";
-  document.getElementById("paramSons").checked =
-    parametres.sons !== false;
-}
-
-document.addEventListener("DOMContentLoaded", chargerParametres);
-  bilanResults = {};
-
-
-  showPage(2);
-
-}
-
-
-/* =====================================================
-   TOAST
-===================================================== */
-
-function showToast(message){
-
-  const toast =
-    document.getElementById(
-      "toast"
-    );
-
-
-  toast.textContent =
-    message;
-
-
-  toast.classList.add(
-    "show"
-  );
-
-
-  setTimeout(()=>{
-
-    toast.classList.remove(
-      "show"
-    );
-
-  },2500);
-
-}
-
-
-/* =====================================================
-   FERMETURE MODAL EXTERIEUR
-===================================================== */
-
-document
-  .getElementById("modal")
-  .addEventListener(
-    "click",
-    function(event){
-
-      if(
-        event.target === this
-      ){
-
-        closeModal();
-
-      }
-
-    }
-  );
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker
-      .register("./service-worker.js")
-      .then(function (registration) {
-        console.log("BILANPRO Service Worker actif ✅", registration.scope);
-      })
-      .catch(function (error) {
-        console.error("Erreur Service Worker ❌", error);
-      });
-  });
-}
-async function activerNotifications() {
-
-  const status = document.getElementById("notificationStatus");
-
-  status.textContent = "⏳ Activation des notifications...";
-
-  try {
-
-    if (!("Notification" in window)) {
-      status.textContent = "❌ Notifications non disponibles.";
-      return;
-    }
-
-    if (!("serviceWorker" in navigator)) {
-      status.textContent = "❌ Service Worker non disponible.";
-      return;
-    }
-
-    if (!("PushManager" in window)) {
-      status.textContent = "❌ Push non disponible.";
-      return;
-    }
-
-    const permission = await Notification.requestPermission();
-
-    if (permission !== "granted") {
-      status.textContent = "🚫 Notifications refusées.";
-      return;
-    }
-
-    const registration = await navigator.serviceWorker.ready;
-
-    const publicKey =
-      "BD-sU_7UDTPimQmMTIpZfjfa9hd8GoFmJkUOhRSuFNco3ehee1AAAWxgqgXtOLEFftukn0RGHttYpYgdnCUdlzk";
-
-    function urlBase64ToUint8Array(base64String) {
-
-      const padding =
-        "=".repeat((4 - base64String.length % 4) % 4);
-
-      const base64 =
-        (base64String + padding)
-          .replace(/-/g, "+")
-          .replace(/_/g, "/");
-
-      const rawData = window.atob(base64);
-
-      return Uint8Array.from(
-        [...rawData].map(char => char.charCodeAt(0))
-      );
-    }
-
-    let subscription =
-      await registration.pushManager.getSubscription();
-
-    if (!subscription) {
-
-      subscription =
-        await registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey:
-            urlBase64ToUint8Array(publicKey)
-        });
-    }
-
-    console.log(
-      "Subscription BILANPRO :",
-      subscription
-    );
-
-    const response = await fetch(
-      "https://bilanpro-push.martos-gaetan67.workers.dev",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
-          subscription: subscription,
-          title: "🚒 BILANPRO",
-          message: "Notifications BILANPRO activées ✅",
-          url: "https://gmmofficial.github.io/BILANPRO/"
-        })
-      }
-    );
-
-    const result = await response.json();
-
-    console.log(
-      "Réponse Worker :",
-      result
-    );
-
-    if (!response.ok || !result.success) {
-      throw new Error(
-        result.error || "Erreur du Worker"
-      );
-    }
-
-    localStorage.setItem(
-      "BILANPRO_PUSH_SUBSCRIPTION",
-      JSON.stringify(subscription)
-    );
-
-    status.textContent =
-      "✅ Notifications BILANPRO activées !";
-
-    alert(
-      "🔔 Notifications BILANPRO activées !"
-    );
-
-  } catch (error) {
-
-    console.error(
-      "Erreur activation Push :",
-      error
-    );
-
-    status.textContent =
-      "❌ Erreur lors de l'activation des notifications.";
-  }
-}
+</script>
