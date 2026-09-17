@@ -1742,7 +1742,24 @@ select option{
 
   <div class="card">
     <h3>🔊 Sons</h3>
+<div class="card">
+  <h3>🔔 Notifications</h3>
 
+  <p>
+    Recevez les alertes BILANPRO directement sur votre téléphone.
+  </p>
+
+  <button
+    class="btn-primary"
+    onclick="activerNotifications()">
+    🔔 ACTIVER LES NOTIFICATIONS
+  </button>
+
+  <p id="notificationStatus"
+     style="margin-top:12px;font-size:13px;opacity:.7;">
+    Notifications non activées
+  </p>
+</div>
     <label style="display:flex;align-items:center;gap:10px;">
       <input type="checkbox" id="paramSons" checked>
       Activer les sons de l'application
