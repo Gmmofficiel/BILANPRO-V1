@@ -1705,7 +1705,69 @@ select option{
      PAGE 5
 ===================================================== -->
 
-<section
+<section class="page" id="page6">
+
+  <div class="page-header">
+    <small>CONFIGURATION</small>
+    <h2>⚙ PARAMÈTRES</h2>
+    <p>Personnalisez votre expérience BILANPRO.</p>
+  </div>
+
+  <div class="card">
+    <h3>👤 Informations du secouriste</h3>
+
+    <label>Nom</label>
+    <input type="text" id="paramNom" placeholder="Votre nom">
+
+    <label>Prénom</label>
+    <input type="text" id="paramPrenom" placeholder="Votre prénom">
+
+    <label>Matricule</label>
+    <input type="text" id="paramMatricule" placeholder="Matricule">
+
+    <label>Centre / service</label>
+    <input type="text" id="paramCentre" placeholder="Ex : CS Grandvilliers">
+  </div>
+
+  <div class="card">
+    <h3>🚒 Fonction</h3>
+
+    <select id="paramFonction">
+      <option value="">Sélectionner</option>
+      <option>Équipier</option>
+      <option>Chef d'équipe</option>
+      <option>Chef d'agrès</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>🔊 Sons</h3>
+
+    <label style="display:flex;align-items:center;gap:10px;">
+      <input type="checkbox" id="paramSons" checked>
+      Activer les sons de l'application
+    </label>
+  </div>
+
+  <div class="card">
+    <h3>ℹ️ À propos</h3>
+    <p><strong>BILANPRO V1</strong></p>
+    <p>Bilan de matériel pour secouristes</p>
+    <p>Version 1.0</p>
+  </div>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;">
+    <button class="btn-primary" onclick="sauvegarderParametres()">
+      💾 ENREGISTRER
+    </button>
+
+    <button class="btn-secondary" onclick="showPage(1)">
+      ← RETOUR
+    </button>
+  </div>
+
+</section>
+  <section
   class="page"
   id="page5">
 
@@ -3903,7 +3965,42 @@ function newBilan(){
       }
     );
 
+function sauvegarderParametres() {
+  const parametres = {
+    nom: document.getElementById("paramNom").value,
+    prenom: document.getElementById("paramPrenom").value,
+    matricule: document.getElementById("paramMatricule").value,
+    centre: document.getElementById("paramCentre").value,
+    fonction: document.getElementById("paramFonction").value,
+    sons: document.getElementById("paramSons").checked
+  };
 
+  localStorage.setItem("BILANPRO_PARAMETRES", JSON.stringify(parametres));
+
+  if (typeof showToast === "function") {
+    showToast("Paramètres enregistrés ✅");
+  } else {
+    alert("Paramètres enregistrés ✅");
+  }
+}
+
+function chargerParametres() {
+  const sauvegarde = localStorage.getItem("BILANPRO_PARAMETRES");
+
+  if (!sauvegarde) return;
+
+  const parametres = JSON.parse(sauvegarde);
+
+  document.getElementById("paramNom").value = parametres.nom || "";
+  document.getElementById("paramPrenom").value = parametres.prenom || "";
+  document.getElementById("paramMatricule").value = parametres.matricule || "";
+  document.getElementById("paramCentre").value = parametres.centre || "";
+  document.getElementById("paramFonction").value = parametres.fonction || "";
+  document.getElementById("paramSons").checked =
+    parametres.sons !== false;
+}
+
+document.addEventListener("DOMContentLoaded", chargerParametres);
   bilanResults = {};
 
 
